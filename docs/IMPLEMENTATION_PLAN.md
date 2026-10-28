@@ -1,6 +1,6 @@
 # Folio: Implementation Plan
 
-> Status: **approved 2026-10-27 (D1–D5 recommended defaults; working name Folio)**. M0–M8 are done; see §14. Store release still needs the items under M7 "Needs you". Nothing has been committed.
+> Status: **approved 2026-10-27 (D1–D5 recommended defaults; working name Folio)**. M0–M8 are done; see §14. Store release still needs the items under M7 "Needs you".
 > Requirements are in [PRD.md](PRD.md). Package facts were checked against pub.dev, GitHub source and Google/Apple docs on 2026-10-27. A second, independent pass then checked every claim adversarially, and three reviewers checked the plan for coverage, correctness and over-engineering.
 
 ---
