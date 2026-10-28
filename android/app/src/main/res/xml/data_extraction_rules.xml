@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- D4: scans never leave the phone. `file` is getFilesDir(), which is where path_provider's
+     getApplicationSupportDirectory() puts library/ and inbox/. The whole domain root is excluded (recursive), not just
+     those two folders: MainActivity's scanner copy fallback stages "<name>.part" directly in filesDir, which per-folder
+     excludes miss, and nothing in files/ should move to a new phone. Android 12+ reads this file; allowBackup="false"
+     alone does not stop device-to-device transfer on some devices, hence both sections. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="file" path="."/>
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="file" path="."/>
+    </device-transfer>
+</data-extraction-rules>

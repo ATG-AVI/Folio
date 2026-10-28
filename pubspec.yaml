@@ -1,0 +1,41 @@
+name: folio
+description: "Private on-device document scanner."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  image: ^4.12.0
+  image_picker: ^1.2.4
+  image_picker_android: ^0.8.13+25
+  image_picker_platform_interface: ^2.11.2
+  path_provider: ^2.1.6
+  pdf: ^3.13.1
+  printing: ^5.15.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Third-party notices the packages' LICENSE files don't cover (lib/licenses.dart). ML Kit's pair is Android-only:
+    # `platforms:` keeps its 74 KB out of the iOS bundle (checked in build/ios/.../flutter_assets).
+    - assets/licenses/image_LICENSE-other.md
+    # Roboto Regular: the invisible text layer of searchable PDFs (lib/pdf.dart), with its licence (lib/licenses.dart).
+    - assets/fonts/Roboto-Regular.ttf
+    - assets/fonts/Roboto_LICENSE.txt
+    - path: assets/licenses/mlkit_third_party_licenses.json.gz
+      platforms: [android]
+    - path: assets/licenses/mlkit_third_party_licenses.txt.gz
+      platforms: [android]
